@@ -80,7 +80,7 @@ function App() {
                 <TableRow key={row.id}>
                   <TableCell>{row.name} </TableCell>
                   <TableCell>{row.email}</TableCell>
-                  <TableCell>{row.password}</TableCell>
+                  <TableCell>********</TableCell>
                   <TableCell>
                     <Button onClick={() => getUser(row.id)} variant="outlined" color="primary">
                       Edit
