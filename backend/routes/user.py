@@ -15,9 +15,9 @@ async def fetch_users(id:int):
 @user.post('/')
 async def create_user(user: User):
      conn.execute(users.insert().values(
-         name = user.name,
-         email = user.email,
-         password = user.password
+         nickname = user.nickname,
+         sin = user.sin,
+         datenschutz = user.datenschutz
      ))
      return conn.execute(users.select()).fetchall()
      
@@ -25,9 +25,9 @@ async def create_user(user: User):
 @user.put('/{id}')
 async def update_user(id:int, user: User):
     conn.execute(users.update().values(
-         name = user.name,
-         email = user.email,
-         password = user.password
+         nickname = user.nickname,
+         sin = user.sin,
+         datenschutz = user.datenschutz
      ).where(users.c.id == id))
     return conn.execute(users.select()).fetchall()
 
