@@ -17,7 +17,10 @@ async def create_user(user: User):
      conn.execute(users.insert().values(
          nickname = user.nickname,
          sin = user.sin,
-         datenschutz = user.datenschutz
+         yourPain = user.yourPain,
+         objPain = user.objPain,
+         ifKeepSecret = user.ifKeepSecret
+         
      ))
      return conn.execute(users.select()).fetchall()
      
@@ -27,7 +30,9 @@ async def update_user(id:int, user: User):
     conn.execute(users.update().values(
          nickname = user.nickname,
          sin = user.sin,
-         datenschutz = user.datenschutz
+         yourPain = user.yourPain,
+         objPain = user.objPain,
+         ifKeepSecret = user.ifKeepSecret
      ).where(users.c.id == id))
     return conn.execute(users.select()).fetchall()
 

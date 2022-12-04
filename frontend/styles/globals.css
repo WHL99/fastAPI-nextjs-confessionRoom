@@ -19,8 +19,40 @@ a {
   html {
     color-scheme: dark;
   }
+
   body {
     color: white;
     background: black;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer&display=swap');
+
+.title {
+  font-family: 'IM Fell Great Primer', serif;
+  padding-top: 6vh;
+  letter-spacing: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1 {
+  color: rgb(79, 44, 44);
+  text-shadow: 2px 2px #d90a0a;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    /* font-family: 'IM Fell Great Primer', serif; */
+    padding-top: 3vh;
+    margin-bottom: -5vh;
+    letter-spacing: 0.2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    color: rgb(79, 44, 44);
+    text-shadow: 2px 2px #d90a0a;
   }
 }
